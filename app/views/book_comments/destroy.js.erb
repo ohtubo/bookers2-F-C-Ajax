@@ -1,0 +1,11 @@
+$("#book_<%= @book.id %> .comments-count").html("コメント数: <%= @book.book_comments.count %>");
+$(".book_comments").html("<%= escape_javascript(render 'book_comments/index', book: @book) %>");
+$("#book_comment_comment").val("");
+
+<!--下記のセレクタを選択する理由がワカラナイ --!>
+<!--"#book_<%#= @book.id %>.comments-count"　A,→要素の指定--!>
+
+<!--そもそもここに辿り着き反映される経路が解らない--!>
+ <!--link_to "Destroy" ⇒  def destroy  ⇒>ｊｓ
+
+<!--$("#book_comment_comment").val("");  ←何をしているかわからない--!>
